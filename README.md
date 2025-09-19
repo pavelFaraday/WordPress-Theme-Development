@@ -1,1 +1,3 @@
-# WordPress-Theme-Development
+# WordPress Theme Development
+
+## Aquila Theme
