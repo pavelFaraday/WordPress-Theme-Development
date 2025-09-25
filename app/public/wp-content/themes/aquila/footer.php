@@ -11,8 +11,9 @@
 <footer>
     <hr>
     <h2>Bye, This is Footer</h2>
-    <p>&copy; 2024 Aquila Theme. All rights reserved.</p>
+    <p>&copy; <?php echo date('Y'); ?> Aquila Theme. All rights reserved.</p>
 </footer>
+<?php wp_footer(); ?>
 </body>
 
 </html>

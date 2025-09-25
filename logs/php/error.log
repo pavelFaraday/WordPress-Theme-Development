@@ -1,1 +1,22 @@
 [19-Sep-2025 14:55:32 UTC] WordPress database error Server shutdown in progress for query SELECT option_value FROM wp_options WHERE option_name = 'theme_mods_twentytwentyfive' LIMIT 1 made by include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php'), include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, wp_widgets_init, do_action('widgets_init'), WP_Hook->do_action, WP_Hook->apply_filters, _wp_block_theme_register_classic_sidebars, get_theme_mod, get_theme_mods, get_option
+[25-Sep-2025 15:07:44 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-customize-widgets.php on line 926
+[25-Sep-2025 15:07:44 UTC] PHP Stack trace:
+[25-Sep-2025 15:07:44 UTC] PHP   1. {main}() /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/customize.php:0
+[25-Sep-2025 15:07:44 UTC] PHP   2. do_action($hook_name = 'customize_controls_print_footer_scripts') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/customize.php:306
+[25-Sep-2025 15:07:44 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/plugin.php:517
+[25-Sep-2025 15:07:44 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-hook.php:348
+[25-Sep-2025 15:07:44 UTC] PHP   5. WP_Customize_Widgets->output_widget_control_templates('') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-hook.php:324
+[25-Sep-2025 15:48:20 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-customize-widgets.php on line 926
+[25-Sep-2025 15:48:20 UTC] PHP Stack trace:
+[25-Sep-2025 15:48:20 UTC] PHP   1. {main}() /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/customize.php:0
+[25-Sep-2025 15:48:20 UTC] PHP   2. do_action($hook_name = 'customize_controls_print_footer_scripts') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/customize.php:306
+[25-Sep-2025 15:48:20 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/plugin.php:517
+[25-Sep-2025 15:48:20 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-hook.php:348
+[25-Sep-2025 15:48:20 UTC] PHP   5. WP_Customize_Widgets->output_widget_control_templates('') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-hook.php:324
+[25-Sep-2025 15:48:36 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-customize-widgets.php on line 926
+[25-Sep-2025 15:48:36 UTC] PHP Stack trace:
+[25-Sep-2025 15:48:36 UTC] PHP   1. {main}() /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/customize.php:0
+[25-Sep-2025 15:48:36 UTC] PHP   2. do_action($hook_name = 'customize_controls_print_footer_scripts') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/customize.php:306
+[25-Sep-2025 15:48:36 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/plugin.php:517
+[25-Sep-2025 15:48:36 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-hook.php:348
+[25-Sep-2025 15:48:36 UTC] PHP   5. WP_Customize_Widgets->output_widget_control_templates('') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-hook.php:324
