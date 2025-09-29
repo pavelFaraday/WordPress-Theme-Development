@@ -17,7 +17,9 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class('aquila-theme'); ?>>
+    <?php wp_body_open(); ?>
+
     <header>
         <h1>Hello, This is Header!</h1>
         <hr>
