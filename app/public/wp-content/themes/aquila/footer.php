@@ -7,7 +7,6 @@
  */
 ?>
 
-
 <footer>
     <hr>
     <h2>Bye, This is Footer</h2>
