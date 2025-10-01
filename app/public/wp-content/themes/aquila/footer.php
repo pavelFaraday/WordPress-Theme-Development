@@ -7,11 +7,17 @@
  */
 ?>
 
+
+
 <footer>
     <hr>
     <h2>Bye, This is Footer</h2>
     <p>&copy; <?php echo date('Y'); ?> Aquila Theme. All rights reserved.</p>
 </footer>
+
+</div>
+</div>
+
 <?php wp_footer(); ?>
 </body>
 
