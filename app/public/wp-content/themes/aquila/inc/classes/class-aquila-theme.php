@@ -17,11 +17,14 @@ class AQUILA_THEME
     protected function __construct()
     {
         // load class.
-        $this->set_hooks();
+        Assets::get_instance();
+
+        // load class.
+        $this->setup_hooks();
     }
 
-    public function set_hooks()
+    public function setup_hooks()
     {
-        // actions and filters
+        // actions
     }
 }
