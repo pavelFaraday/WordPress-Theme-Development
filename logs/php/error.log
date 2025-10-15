@@ -119,3 +119,275 @@
 [13-Oct-2025 06:42:18 UTC] PHP  10. wpdb->__construct($dbuser = 'root', $dbpassword = '[Sensitive Parameter]', $dbname = 'local', $dbhost = 'localhost') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/load.php:720
 [13-Oct-2025 06:42:18 UTC] PHP  11. wpdb->db_connect($allow_bail = *uninitialized*) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wpdb.php:773
 [13-Oct-2025 06:42:18 UTC] PHP  12. mysqli_real_connect($mysql = class mysqli { public $client_info = 'mysqlnd 8.2.27'; public $client_version = 80227; public $connect_errno = 2002; public $connect_error = 'No such file or directory'; public $errno = 2002; public $error = 'No such file or directory' }, $hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = NULL, $port = NULL, $socket = NULL, $flags = 0) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wpdb.php:1988
+[15-Oct-2025 05:34:00 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wpdb.php on line 1988
+[15-Oct-2025 05:34:00 UTC] PHP Stack trace:
+[15-Oct-2025 05:34:00 UTC] PHP   1. {main}() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:0
+[15-Oct-2025 05:34:00 UTC] PHP   2. include() /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar:4
+[15-Oct-2025 05:34:00 UTC] PHP   3. include() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php:20
+[15-Oct-2025 05:34:00 UTC] PHP   4. WP_CLI\bootstrap() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:35
+[15-Oct-2025 05:34:00 UTC] PHP   5. WP_CLI\Bootstrap\LaunchRunner->process($state = class WP_CLI\Bootstrap\BootstrapState { private $state = ['config' => [...], 'arguments' => [...], 'assoc_args' => [...], 'context_manager' => class WP_CLI\ContextManager { ... }] }) phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:84
+[15-Oct-2025 05:34:00 UTC] PHP   6. WP_CLI\Runner->start() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:28
+[15-Oct-2025 05:34:00 UTC] PHP   7. WP_CLI\Runner->load_wordpress() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1293
+[15-Oct-2025 05:34:00 UTC] PHP   8. require() phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1374
+[15-Oct-2025 05:34:00 UTC] PHP   9. require_wp_db() /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php:134
+[15-Oct-2025 05:34:00 UTC] PHP  10. wpdb->__construct($dbuser = 'root', $dbpassword = '[Sensitive Parameter]', $dbname = 'local', $dbhost = 'localhost') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/load.php:720
+[15-Oct-2025 05:34:00 UTC] PHP  11. wpdb->db_connect($allow_bail = *uninitialized*) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wpdb.php:773
+[15-Oct-2025 05:34:00 UTC] PHP  12. mysqli_real_connect($mysql = class mysqli { public $client_info = 'mysqlnd 8.2.27'; public $client_version = 80227; public $connect_errno = 2002; public $connect_error = 'No such file or directory'; public $errno = 2002; public $error = 'No such file or directory' }, $hostname = 'localhost', $username = 'root', $password = '[Sensitive Parameter]', $database = NULL, $port = NULL, $socket = NULL, $flags = 0) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wpdb.php:1988
+[15-Oct-2025 05:46:40 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/macuser/...')
+#5 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:40 UTC] PHP Notice:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>aquila</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/functions.php on line 6121
+[15-Oct-2025 05:46:40 UTC] PHP Stack trace:
+[15-Oct-2025 05:46:40 UTC] PHP   1. WP_Fatal_Error_Handler->handle() /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-fatal-error-handler.php:0
+[15-Oct-2025 05:46:40 UTC] PHP   2. WP_Recovery_Mode->handle_error($error = ['type' => 1, 'message' => 'Uncaught Error: Class "AQUILA_THEME\\Inc\\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15\nStack trace:\n#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()\n#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include(\'/Users/macuser/...\')\n#2 /Users/macuser/Local Sites/wordpress-theme-developmen'..., 'file' => '/Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php', 'line' => 15]) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-fatal-error-handler.php:55
+[15-Oct-2025 05:46:40 UTC] PHP   3. WP_Recovery_Mode_Email_Service->maybe_send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 1, 'message' => 'Uncaught Error: Class "AQUILA_THEME\\Inc\\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15\nStack trace:\n#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()\n#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include(\'/Users/macuser/...\')\n#2 /Users/macuser/Local Sites/wordpress-theme-developmen'..., 'file' => '/Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php', 'line' => 15], $extension = ['type' => 'theme', 'slug' => 'aquila']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode.php:185
+[15-Oct-2025 05:46:40 UTC] PHP   4. WP_Recovery_Mode_Email_Service->send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 1, 'message' => 'Uncaught Error: Class "AQUILA_THEME\\Inc\\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15\nStack trace:\n#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()\n#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include(\'/Users/macuser/...\')\n#2 /Users/macuser/Local Sites/wordpress-theme-developmen'..., 'file' => '/Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php', 'line' => 15], $extension = ['type' => 'theme', 'slug' => 'aquila']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode-email-service.php:62
+[15-Oct-2025 05:46:40 UTC] PHP   5. WP_Recovery_Mode_Email_Service->get_cause($extension = ['type' => 'theme', 'slug' => 'aquila']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode-email-service.php:122
+[15-Oct-2025 05:46:40 UTC] PHP   6. WP_Theme->display($header = 'Name', $markup = *uninitialized*, $translate = *uninitialized*) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode-email-service.php:283
+[15-Oct-2025 05:46:40 UTC] PHP   7. WP_Theme->translate_header($header = 'Name', $value = 'Aquila') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-theme.php:921
+[15-Oct-2025 05:46:40 UTC] PHP   8. translate($text = 'Aquila', $domain = 'aquila') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-theme.php:1059
+[15-Oct-2025 05:46:40 UTC] PHP   9. get_translations_for_domain($domain = 'aquila') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/l10n.php:195
+[15-Oct-2025 05:46:40 UTC] PHP  10. _load_textdomain_just_in_time($domain = 'aquila') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/l10n.php:1409
+[15-Oct-2025 05:46:40 UTC] PHP  11. _doing_it_wrong($function_name = '_load_textdomain_just_in_time', $message = 'Translation loading for the <code>aquila</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later.', $version = '6.7.0') /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/l10n.php:1371
+[15-Oct-2025 05:46:40 UTC] PHP  12. wp_trigger_error($function_name = '', $message = 'Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>aquila</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.)', $error_level = *uninitialized*) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/functions.php:6061
+[15-Oct-2025 05:46:40 UTC] PHP  13. trigger_error($message = 'Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>aquila</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.)', $error_level = 1024) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/functions.php:6121
+[15-Oct-2025 05:46:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[15-Oct-2025 05:46:40 UTC] PHP Stack trace:
+[15-Oct-2025 05:46:40 UTC] PHP   1. WP_Fatal_Error_Handler->handle() /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-fatal-error-handler.php:0
+[15-Oct-2025 05:46:40 UTC] PHP   2. WP_Recovery_Mode->handle_error($error = ['type' => 1, 'message' => 'Uncaught Error: Class "AQUILA_THEME\\Inc\\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15\nStack trace:\n#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()\n#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include(\'/Users/macuser/...\')\n#2 /Users/macuser/Local Sites/wordpress-theme-developmen'..., 'file' => '/Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php', 'line' => 15]) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-fatal-error-handler.php:55
+[15-Oct-2025 05:46:40 UTC] PHP   3. WP_Recovery_Mode_Email_Service->maybe_send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 1, 'message' => 'Uncaught Error: Class "AQUILA_THEME\\Inc\\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15\nStack trace:\n#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()\n#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include(\'/Users/macuser/...\')\n#2 /Users/macuser/Local Sites/wordpress-theme-developmen'..., 'file' => '/Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php', 'line' => 15], $extension = ['type' => 'theme', 'slug' => 'aquila']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode.php:185
+[15-Oct-2025 05:46:40 UTC] PHP   4. WP_Recovery_Mode_Email_Service->send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 1, 'message' => 'Uncaught Error: Class "AQUILA_THEME\\Inc\\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15\nStack trace:\n#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()\n#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include(\'/Users/macuser/...\')\n#2 /Users/macuser/Local Sites/wordpress-theme-developmen'..., 'file' => '/Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php', 'line' => 15], $extension = ['type' => 'theme', 'slug' => 'aquila']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode-email-service.php:62
+[15-Oct-2025 05:46:40 UTC] PHP   5. WP_Recovery_Mode_Email_Service->get_debug($extension = ['type' => 'theme', 'slug' => 'aquila']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode-email-service.php:150
+[15-Oct-2025 05:46:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[15-Oct-2025 05:46:40 UTC] PHP Stack trace:
+[15-Oct-2025 05:46:40 UTC] PHP   1. WP_Fatal_Error_Handler->handle() /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-fatal-error-handler.php:0
+[15-Oct-2025 05:46:40 UTC] PHP   2. WP_Recovery_Mode->handle_error($error = ['type' => 1, 'message' => 'Uncaught Error: Class "AQUILA_THEME\\Inc\\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15\nStack trace:\n#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()\n#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include(\'/Users/macuser/...\')\n#2 /Users/macuser/Local Sites/wordpress-theme-developmen'..., 'file' => '/Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php', 'line' => 15]) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-fatal-error-handler.php:55
+[15-Oct-2025 05:46:40 UTC] PHP   3. WP_Recovery_Mode_Email_Service->maybe_send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 1, 'message' => 'Uncaught Error: Class "AQUILA_THEME\\Inc\\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15\nStack trace:\n#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()\n#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include(\'/Users/macuser/...\')\n#2 /Users/macuser/Local Sites/wordpress-theme-developmen'..., 'file' => '/Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php', 'line' => 15], $extension = ['type' => 'theme', 'slug' => 'aquila']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode.php:185
+[15-Oct-2025 05:46:40 UTC] PHP   4. WP_Recovery_Mode_Email_Service->send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 1, 'message' => 'Uncaught Error: Class "AQUILA_THEME\\Inc\\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15\nStack trace:\n#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()\n#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include(\'/Users/macuser/...\')\n#2 /Users/macuser/Local Sites/wordpress-theme-developmen'..., 'file' => '/Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php', 'line' => 15], $extension = ['type' => 'theme', 'slug' => 'aquila']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode-email-service.php:62
+[15-Oct-2025 05:46:40 UTC] PHP   5. WP_Recovery_Mode_Email_Service->get_debug($extension = ['type' => 'theme', 'slug' => 'aquila']) /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-includes/class-wp-recovery-mode-email-service.php:150
+[15-Oct-2025 05:46:42 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:42 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:44 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:44 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:55 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:56 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:56 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:57 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:57 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:57 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:57 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:46:57 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:47:33 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:47:33 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\Class_aquila_theme" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:49:01 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\CLASS_THEME" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:49:01 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\CLASS_THEME" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:49:02 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\CLASS_THEME" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:49:02 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\CLASS_THEME" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:49:03 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\CLASS_THEME" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:49:03 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\CLASS_THEME" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:49:58 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\AQUILA_THEME" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/admin.php(35): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-admin/index.php(10): require_once('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
+[15-Oct-2025 05:49:58 UTC] PHP Fatal error:  Uncaught Error: Class "AQUILA_THEME\Inc\AQUILA_THEME" not found in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php:15
+Stack trace:
+#0 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php(17): aquila_get_theme_instance()
+#1 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-settings.php(695): include('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-config.php(104): require_once('/Users/macuser/...')
+#3 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#4 /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-blog-header.php(13): require_once('/Users/macuser/...')
+#5 /Users/macuser/Local Sites/wordpress-theme-development/app/public/index.php(17): require('/Users/macuser/...')
+#6 {main}
+  thrown in /Users/macuser/Local Sites/wordpress-theme-development/app/public/wp-content/themes/aquila/functions.php on line 15
